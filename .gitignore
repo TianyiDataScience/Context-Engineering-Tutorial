@@ -1,0 +1,17 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# local workinf scripts
+ai_chat_keyvalue.py
+ai_chat_summarization.py
+demo_new_window.py
+demo_old_window.py
+usage_example.py
