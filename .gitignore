@@ -15,3 +15,6 @@ ai_chat_summarization.py
 demo_new_window.py
 demo_old_window.py
 usage_example.py
+
+# Environment variables
+.env
