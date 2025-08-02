@@ -1,3 +1,37 @@
+<h1 align="center">
+  <br>
+  <img src="./assets/icon.png" alt="Markdownify" width="200"></a>
+    <img src="./assets/screenshot.jpg" alt="App Screenshot" width="500"/>
+  <br>
+  Context-Engineering-Tutorial
+  <br>
+</h1>
+
+<h4 align="center">A theorical and practical context engineering tutorial based on <a href="[http://[electron.atom.io](https://github.com/langchain-ai/langchain)](https://github.com/langchain-ai/langchain)" target="_blank">LangChain and LangGraph </a>.</h4>
+
+<p align="center">
+  <a href="https://badge.fury.io/js/electron-markdownify">
+    <img src="https://badge.fury.io/js/electron-markdownify.svg"
+         alt="Gitter">
+  </a>
+  <a href="https://gitter.im/amitmerchant1990/electron-markdownify"><img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg"></a>
+  <a href="https://saythanks.io/to/bullredeyes@gmail.com">
+      <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg">
+  </a>
+  <a href="https://www.paypal.me/AmitMerchant">
+    <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
+  </a>
+</p>
+
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#download">Download</a> •
+  <a href="#credits">Credits</a> •
+  <a href="#related">Related</a> •
+  <a href="#license">License</a>
+</p>
+
 1. **下载VS code：**
     1. https://code.visualstudio.com/
 2. **安装uv：**
@@ -102,4 +136,5 @@
     
     ```
     python chat_agent.py
+
     ```
