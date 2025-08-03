@@ -50,16 +50,16 @@ $ cd Context-Engineering-Tutorial
 
 ## Guide for no-coders
 
-1. **下载VS code：**
+1. **Download VS code：**
     1. https://code.visualstudio.com/
-2. **安装uv：**
+2. **Install uv：**
     1. Linux/MacOS：
         
         ```bash
         curl -LsSf https://astral.sh/uv/install.sh | sh
         ```
         
-        后重启终端
+        then restart terminal
         
     2. Windows:
         
@@ -67,57 +67,59 @@ $ cd Context-Engineering-Tutorial
         irm https://astral.sh/uv/install.ps1 | iex
         ```
         
-        后重启powershell
+        then restart powershell
         
     
-    ?什么是uv?
-    
-    uv是用于 Python 的一个非常快速的包安装器和解析器
-    
-    uv 主要能做到两件核心事情，并将它们做得极快：
-    1. 包管理：作为 pip 和 pip-tools 的一个完整且极速的替代品。
-    2. 虚拟环境管理：作为 venv 或 virtualenv 的一个快速替代品。
+    ?What is uv?
+
+    uv is an extremely fast package installer and resolver for Python.
+
+    uv primarily does two core things, and it does them extremely fast:
+
+    Package management: As a complete and extremely fast replacement for pip and pip-tools.
+
+    Virtual environment management: As a fast replacement for venv or virtualenv.
     ```
     
-3. **设置项目并运行 AI 代理**
+3. **Create a folder**
     
     ```
     mkdir my-ai-agent
     cd my-ai-agent
     ```
     
-4. **创建并激活虚拟环境**：`uv` 会自动在名为 `.venv` 的文件夹中创建环境。
+4. **Create and activate the virtual environment**：uv will automatically create an environment in a folder named .venv.。
     1. Linux/MacOS：
         
         ```bash
-        # 创建虚拟环境
+        # Create the virtual environment
         uv venv
-        # 激活虚拟环境
+        # Activate the virtual environment
         source .venv/bin/activate 
         ```
         
     2. Windows
         
         ```powershell
-        # 创建虚拟环境
+        # Create the virtual environment
         uv venv
-        # 激活虚拟环境
+        # Activate the virtual environment
         .\.venv\Scripts\Activate.ps
         ```
     
-5. **初始化项目**：此命令会创建一个 `pyproject.toml` 文件。
+5. **Initialize the project:**：This command will create a pyproject.toml file.
     
     ```bash
     	uv init
     ```
     
-6. **安装依赖库**：
+6. **Install dependencies**：
     
     ```
     uv add langchain langchain_community python-dotenv
     ```
     
-7. **创建 Python 脚本文件**：
+7. **Create the Python script file**：
     
     ```bash
     # linux/mac
@@ -126,7 +128,7 @@ $ cd Context-Engineering-Tutorial
     ni chat_agent.py
     ```
     
-8. 在项目中创建 `.env` 文件
+8. **Create the .env file in the project**
     
     ```bash
     # 确保你在 my-ai-agent 文件夹内
@@ -136,26 +138,20 @@ $ cd Context-Engineering-Tutorial
     ni .env
     ```
     
-    打开 `.env` 文件，然后像下面这样写入您的密钥（注意：没有 `export`，格式是 `KEY=VALUE`）：
+    Open the .env file and write your key like below (Note: no export, the format is KEY=VALUE):
+
+    GOOGLE_API_KEY='your_api_key'
     
-    `GOOGLE_API_KEY='你的密钥'`
     
-9. **确保向 Python 程序传递中文字符时，使用的编码格式是 Python 和 LangChain 所期望的 UTF-8**。
-    
-    ```bash
-    # WSL/Linux
-    echo 'export PYTHONUTF8=1' >> ~/.bashrc
-    ```
-    
-    然后启动新的终端
-    
-10. **粘贴代码**：将您的 AI 代理代码粘贴到打开的编辑器中， 保存。
-11. **运行脚本**：
+9. **Paste the code**：Paste your AI agent code into the open editor and save.
+11. **Run the script**：
     
     ```
     python chat_agent.py
 
     ```
+
+
 
 ## License
 
