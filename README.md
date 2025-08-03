@@ -23,13 +23,27 @@
 </p>
 
 <p align="center">
-  <a href="#key-features">Key Features</a> •
+  <a href="#key-features">Key Feature</a> •
   <a href="#how-to-use">How To Use</a> •
-  <a href="#download">Download</a> •
-  <a href="#credits">Credits</a> •
-  <a href="#related">Related</a> •
+  <a href="#Guide for no-coders">Guide for no-coders
+</a> •
   <a href="#license">License</a>
 </p>
+
+## Key Feature
+
+* Slides for theorical explanation + Python code for realization.
+
+## How To Use
+```bash
+# Clone this repository
+$ git clone https://github.com/TianyiDataScience/Context-Engineering-Tutorial.git)
+
+# Go into the repository
+$ cd Context-Engineering-Tutorial
+```
+
+## Guide for no-coders
 
 1. **下载VS code：**
     1. https://code.visualstudio.com/
@@ -137,4 +151,8 @@
     python chat_agent.py
 
     ```
+
+## License
+
+MIT
 
