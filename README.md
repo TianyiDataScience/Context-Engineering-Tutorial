@@ -8,7 +8,10 @@
 
 <h4 align="center">A theorical and practical context engineering tutorial based on <a href="[http://[electron.atom.io](https://github.com/langchain-ai/langchain)](https://github.com/langchain-ai/langchain)" target="_blank">LangChain and LangGraph </a>.</h4>
 
-English · [简体中文](./README-cn.md) ·
+
+<p align="center">
+  English · <a href="./README-cn.md">简体中文</a>
+</p>
 
 <p align="center">
   <a href="https://badge.fury.io/js/electron-markdownify">
@@ -157,4 +160,5 @@ $ cd Context-Engineering-Tutorial
 ## License
 
 MIT
+
 
