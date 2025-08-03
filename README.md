@@ -1,7 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="./assets/icon.png" alt="Markdownify" width="200"></a>
-    <img src="./assets/screenshot.jpg" alt="App Screenshot" width="500"/>
+  <img src="./assets/icon.png" alt="Markdownify" width="300"></a>
   <br>
   Context-Engineering-Tutorial
   <br>
@@ -138,3 +137,4 @@
     python chat_agent.py
 
     ```
+
