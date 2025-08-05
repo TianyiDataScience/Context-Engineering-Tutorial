@@ -27,7 +27,6 @@
   * Youtube: https://www.youtube.com/channel/UCY3SgqRpZd0GWWk8dRCybdw
   * B站： https://space.bilibili.com/13416784
   * 小红书：木子不写代码
-* 视频教程尚在更新中...
 
 ## 内容
 
@@ -36,6 +35,7 @@
     * 课件：Context Engineering-WindowMemory-cn.pdf
     * 实现方式1脚本(旧版langchain)：window_memory_v1.py
     * 实现方式2脚本(当前版本langchain)：window_memory_v2.py
+* 视频和教程尚在更新中...
 
 ## 如何使用
 ```bash
@@ -146,6 +146,7 @@ $ cd Context-Engineering-Tutorial
 ## 许可证
 
 MIT
+
 
 
 
