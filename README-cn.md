@@ -13,20 +13,6 @@
 </p>
 
 <p align="center">
-  <a href="https://badge.fury.io/js/electron-markdownify">
-    <img src="https://badge.fury.io/js/electron-markdownify.svg"
-         alt="Gitter">
-  </a>
-  <a href="https://gitter.im/amitmerchant1990/electron-markdownify"><img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg" alt="Gitter聊天"></a>
-  <a href="https://saythanks.io/to/bullredeyes@gmail.com">
-      <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg" alt="说声谢谢">
-  </a>
-  <a href="https://www.paypal.me/AmitMerchant">
-    <img src="https://img.shields.io/badge/$-赞赏-ff69b4.svg?maxAge=2592000&amp;style=flat" alt="赞赏">
-  </a>
-</p>
-
-<p align="center">
   <a href="#主要特性">主要特性</a> •
   <a href="#内容">内容</a> •
   <a href="#如何使用">如何使用</a> •
@@ -65,7 +51,8 @@ $ cd Context-Engineering-Tutorial
     1. https://code.visualstudio.com/
     2. 安装并打开 vscode
     3. 在本地新建一个文件夹并在VScode中打开
-    4. <img src="./assets/vscode_init.png" alt="Markdownify" width="300">
+       
+       <img src="./assets/vscode_init.png" alt="Markdownify" width="450">
 2. **安装uv：**
     1. Linux/MacOS：
         
@@ -74,16 +61,18 @@ $ cd Context-Engineering-Tutorial
         ```
         
         后重启终端
-       <img src="./assets/uv_install_linuxmac.png" alt="Markdownify" width="300">
+       
+       <img src="./assets/uv_install_linuxmac.png" alt="Markdownify" width="450">
         
-    2. Windows:
+    3. Windows:
         
         ```powershell
         powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
         ```
         
         后重启powershell
-        <img src="./assets/uv_install_windows.png" alt="Markdownify" width="300">
+       
+        <img src="./assets/uv_install_windows.png" alt="Markdownify" width="450">
     
     ?什么是uv?
     
@@ -97,7 +86,7 @@ $ cd Context-Engineering-Tutorial
 3.**克隆项目**
   1. 安装git:进入页面 https://git-scm.com/book/zh/v2/ 后点击1.5安装
   2. 终端：git clone https://github.com/TianyiDataScience/Context-Engineering-Tutorial.git
-     <img src="./assets/git_clone.png" alt="Markdownify" width="300">
+     <img src="./assets/git_clone.png" alt="Markdownify" width="450">
 
     
 4. **进入项目目录**
@@ -115,7 +104,8 @@ $ cd Context-Engineering-Tutorial
         # 激活虚拟环境
         source .venv/bin/activate 
         ```
-        
+         <img src="./assets/venv.png" alt="Markdownify" width="450">
+
     2. Windows
         
         ```powershell
@@ -124,16 +114,16 @@ $ cd Context-Engineering-Tutorial
         # 激活虚拟环境
         .\.venv\Scripts\Activate.ps
         ```
-        <img src="./assets/venv.png" alt="Markdownify" width="300">
+        
     
-6. **安装所有项目的所有依赖**：
+5. **安装所有项目的所有依赖**：
     
     ```
     uv sync
     ```
     为什么用 uv sync？ 读取 uv.lock 文件，确保安装的每一个库都和项目作者使用的版本完全一致。
     
-7. **配置环境变量**：
+6. **配置环境变量**：
    
    复制 .env.example 到新的.env文件
     ```bash
@@ -144,18 +134,19 @@ $ cd Context-Engineering-Tutorial
     ```
     后打开这个新的 .env 文件，填入自己的 API 密钥。
     
-8. **运行脚本**：
+7. **运行脚本**：
     
     ```
     # 比如运行窗口记忆对话机器人
     python window_memory_v1.py
-    <img src="./assets/launch_script.png" alt="Markdownify" width="300">
+    <img src="./assets/launch_script.png" alt="Markdownify" width="450">
 
     ```
 
 ## 许可证
 
 MIT
+
 
 
 
