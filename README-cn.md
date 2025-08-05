@@ -37,6 +37,11 @@
 ## 主要特性
 
 * 理论讲解幻灯片 + Python 代码实现。
+* 基于Youtube和B站视频教程：木子不写代码
+  * Youtube: https://www.youtube.com/channel/UCY3SgqRpZd0GWWk8dRCybdw
+  * B站： https://space.bilibili.com/13416784
+  * 小红书：木子不写代码
+* 视频教程尚在更新中...
 
 ## 内容
 
@@ -166,4 +171,5 @@ $ cd Context-Engineering-Tutorial
 ## 许可证
 
 MIT
+
 
