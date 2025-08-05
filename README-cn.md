@@ -54,15 +54,18 @@
 ## 如何使用
 ```bash
 # 克隆此仓库
-$ git clone [https://github.com/TianyiDataScience/Context-Engineering-Tutorial.git](https://github.com/TianyiDataScience/Context-Engineering-Tutorial.git)
+$ git clone https://github.com/TianyiDataScience/Context-Engineering-Tutorial.git
 
 # 进入仓库目录
 $ cd Context-Engineering-Tutorial
 ```
 
 ## 给非程序员的指南
-1. **下载VS code：**
+1. **下载和设置VS code：**
     1. https://code.visualstudio.com/
+    2. 安装并打开 vscode
+    3. 在本地新建一个文件夹并在VScode中打开
+    4. <img src="./assets/vscode_init.png" alt="Markdownify" width="300"></a>
 2. **安装uv：**
     1. Linux/MacOS：
         
@@ -71,15 +74,16 @@ $ cd Context-Engineering-Tutorial
         ```
         
         后重启终端
+       <img src="./assets/uv_install_linuxmac.png" alt="Markdownify" width="300">
         
     2. Windows:
         
         ```powershell
-        irm https://astral.sh/uv/install.ps1 | iex
+        powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
         ```
         
         后重启powershell
-        
+        <img src="./assets/uv_install_windows.png" alt="Markdownify" width="300">
     
     ?什么是uv?
     
@@ -89,15 +93,20 @@ $ cd Context-Engineering-Tutorial
     1. 包管理：作为 pip 和 pip-tools 的一个完整且极速的替代品。
     2. 虚拟环境管理：作为 venv 或 virtualenv 的一个快速替代品。
     ```
+   
+3.**克隆项目**
+  1. 安装git:进入页面 https://git-scm.com/book/zh/v2/ 后点击1.5安装
+  2. 终端：git clone https://github.com/TianyiDataScience/Context-Engineering-Tutorial.git
+     <img src="./assets/git_clone.png" alt="Markdownify" width="300">
+
     
-3. **设置项目并运行 AI 代理**
+4. **进入项目目录**
     
     ```
-    mkdir my-ai-agent
-    cd my-ai-agent
+    cd Context-Engineering-Tutorial
     ```
     
-4. **创建并激活虚拟环境**：`uv` 会自动在名为 `.venv` 的文件夹中创建环境。
+5. **创建并激活虚拟环境**：`uv` 会自动在名为 `.venv` 的文件夹中创建环境。
     1. Linux/MacOS：
         
         ```bash
@@ -110,66 +119,43 @@ $ cd Context-Engineering-Tutorial
     2. Windows
         
         ```powershell
-        # 创建虚拟环境
+        # 创建虚拟环境 
         uv venv
         # 激活虚拟环境
         .\.venv\Scripts\Activate.ps
         ```
+        <img src="./assets/venv.png" alt="Markdownify" width="300">
     
-5. **初始化项目**：此命令会创建一个 `pyproject.toml` 文件。
-    
-    ```bash
-    	uv init
-    ```
-    
-6. **安装依赖库**：
+6. **安装所有项目的所有依赖**：
     
     ```
-    uv add langchain langchain_community python-dotenv
+    uv sync
     ```
+    为什么用 uv sync？ 读取 uv.lock 文件，确保安装的每一个库都和项目作者使用的版本完全一致。
     
-7. **创建 Python 脚本文件**：
-    
+7. **配置环境变量**：
+   
+   复制 .env.example 到新的.env文件
     ```bash
     # linux/mac
-    touch chat_agent.py
+    cp .env.example .env
     # windows
-    ni chat_agent.py
+    copy .env.example .env
     ```
+    后打开这个新的 .env 文件，填入自己的 API 密钥。
     
-8. 在项目中创建 `.env` 文件
-    
-    ```bash
-    # 确保你在 my-ai-agent 文件夹内
-    # linux/mac
-    touch .env
-    # windows
-    ni .env
-    ```
-    
-    打开 `.env` 文件，然后像下面这样写入您的密钥（注意：没有 `export`，格式是 `KEY=VALUE`）：
-    
-    `GOOGLE_API_KEY='你的密钥'`
-    
-9. **确保向 Python 程序传递中文字符时，使用的编码格式是 Python 和 LangChain 所期望的 UTF-8**。
-    
-    ```bash
-    # WSL/Linux
-    echo 'export PYTHONUTF8=1' >> ~/.bashrc
-    ```
-    
-    然后启动新的终端
-    
-10. **粘贴代码**：将您的 AI 代理代码粘贴到打开的编辑器中， 保存。
-11. **运行脚本**：
+8. **运行脚本**：
     
     ```
-    python chat_agent.py
+    # 比如运行窗口记忆对话机器人
+    python window_memory_v1.py
+    <img src="./assets/launch_script.png" alt="Markdownify" width="300">
 
     ```
 
 ## 许可证
 
 MIT
+
 
 
