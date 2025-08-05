@@ -13,36 +13,23 @@
   English · <a href="./README-cn.md">简体中文</a>
 </p>
 
-<p align="center">
-  <a href="https://badge.fury.io/js/electron-markdownify">
-    <img src="https://badge.fury.io/js/electron-markdownify.svg"
-         alt="Gitter">
-  </a>
-  <a href="https://gitter.im/amitmerchant1990/electron-markdownify"><img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg"></a>
-  <a href="https://saythanks.io/to/bullredeyes@gmail.com">
-      <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg">
-  </a>
-  <a href="https://www.paypal.me/AmitMerchant">
-    <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
-  </a>
-</p>
 
 <p align="center">
-  <a href="#key-features">Key Feature</a> •
-  <a href="#how-to-use">How To Use</a> •
-  <a href="#Guide for no-coders">Guide for no-coders
-</a> •
-  <a href="#license">License</a>
+  <a href="#main-features">Main Features</a> •
+  <a href="#contents">Contents</a> •
+  <a href="#how-to-use">How to Use</a> •
+  <a href="#guide-for-non-programmers">Guide for Non-programmers</a> •
+  <a href="#license">License</a>
 </p>
 
 ## Key Feature
 
 * Slides for theorical explanation + Python code for realization.
-
+  
 ## How To Use
 ```bash
 # Clone this repository
-$ git clone https://github.com/TianyiDataScience/Context-Engineering-Tutorial.git)
+$ git clone https://github.com/TianyiDataScience/Context-Engineering-Tutorial.git
 
 # Go into the repository
 $ cd Context-Engineering-Tutorial
@@ -50,8 +37,12 @@ $ cd Context-Engineering-Tutorial
 
 ## Guide for no-coders
 
-1. **Download VS code：**
+1. **Download and set up VS code：**
     1. https://code.visualstudio.com/
+    2. Install and open VS Code
+    3. Create a new folder locally and open it in VS Code
+       
+       <img src="./assets/vscode_init.png" alt="Markdownify" width="450">
 2. **Install uv：**
     1. Linux/MacOS：
         
@@ -59,36 +50,45 @@ $ cd Context-Engineering-Tutorial
         curl -LsSf https://astral.sh/uv/install.sh | sh
         ```
         
-        then restart terminal
+        Then restart the terminal.
+       
+       <img src="./assets/uv_install_linuxmac.png" alt="Markdownify" width="450">
         
-    2. Windows:
+    3. Windows:
         
         ```powershell
-        irm https://astral.sh/uv/install.ps1 | iex
+        powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
         ```
         
-        then restart powershell
-        
+        Then restart PowerShell.
+       
+        <img src="./assets/uv_install_windows.png" alt="Markdownify" width="450">
     
-    ?What is uv?
+    ? What is uv?
 
-    uv is an extremely fast package installer and resolver for Python.
+    uv is an extremely fast Python package installer and resolver.
+    
+    uv primarily does two core things, and does them extremely fast:
+    
+    Package management: A complete and extremely fast replacement for pip and pip-tools.
+    
+    Virtual environment management: A fast replacement for venv or virtualenv.
+    ```
+   
+3.**Clone the project**
+  1. Install git: Go to the page https://git-scm.com/book/en/v2/ and follow the installation instructions in section 1.5.
+  2. In your terminal: ：git clone https://github.com/TianyiDataScience/Context-Engineering-Tutorial.git
+     
+     <img src="./assets/git_clone.png" alt="Markdownify" width="450">
 
-    uv primarily does two core things, and it does them extremely fast:
-
-    Package management: As a complete and extremely fast replacement for pip and pip-tools.
-
-    Virtual environment management: As a fast replacement for venv or virtualenv.
+    
+4. **Enter the project directory**
+    
+    ```
+    cd Context-Engineering-Tutorial
     ```
     
-3. **Create a folder**
-    
-    ```
-    mkdir my-ai-agent
-    cd my-ai-agent
-    ```
-    
-4. **Create and activate the virtual environment**：uv will automatically create an environment in a folder named .venv.。
+5. **Create and activate the virtual environment:** uv will automatically create an environment in a folder named .venv.
     1. Linux/MacOS：
         
         ```bash
@@ -97,64 +97,49 @@ $ cd Context-Engineering-Tutorial
         # Activate the virtual environment
         source .venv/bin/activate 
         ```
-        
+         <img src="./assets/venv.png" alt="Markdownify" width="450">
+
     2. Windows
         
         ```powershell
-        # Create the virtual environment
+        # Create the virtual environment 
         uv venv
-        # Activate the virtual environment
+        #  Activate the virtual environment
         .\.venv\Scripts\Activate.ps
         ```
+        
     
-5. **Initialize the project:**：This command will create a pyproject.toml file.
-    
-    ```bash
-    	uv init
-    ```
-    
-6. **Install dependencies**：
+5. **Install all project dependencies:**：
     
     ```
-    uv add langchain langchain_community python-dotenv
+    uv sync
     ```
+    Why use uv sync? It reads the uv.lock file to ensure that every library installed is the exact same version used by the project author.
     
-7. **Create the Python script file**：
-    
+6. **Configure environment variables:**：
+   
+   Copy .env.example to a new .env file.
     ```bash
     # linux/mac
-    touch chat_agent.py
+    cp .env.example .env
     # windows
-    ni chat_agent.py
+    copy .env.example .env
     ```
+    Then open this new .env file and fill in your own API keys.
     
-8. **Create the .env file in the project**
-    
-    ```bash
-    # 确保你在 my-ai-agent 文件夹内
-    # linux/mac
-    touch .env
-    # windows
-    ni .env
-    ```
-    
-    Open the .env file and write your key like below (Note: no export, the format is KEY=VALUE):
-
-    GOOGLE_API_KEY='your_api_key'
-    
-    
-9. **Paste the code**：Paste your AI agent code into the open editor and save.
-11. **Run the script**：
+7. **Run a script:**：
     
     ```
-    python chat_agent.py
+    # For example, to run the window memory chatbot
+    python window_memory_v1.py
+    <img src="./assets/launch_script.png" alt="Markdownify" width="450">
 
     ```
-
 
 
 ## License
 
 MIT
+
 
 
