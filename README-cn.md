@@ -28,6 +28,7 @@
 
 <p align="center">
   <a href="#主要特性">主要特性</a> •
+  <a href="#内容">内容</a> •
   <a href="#如何使用">如何使用</a> •
   <a href="#给非程序员的指南">给非程序员的指南</a> •
   <a href="#许可证">许可证</a>
@@ -36,6 +37,14 @@
 ## 主要特性
 
 * 理论讲解幻灯片 + Python 代码实现。
+
+## 内容
+
+* 记忆：
+  * 窗口记忆：
+    * 课件：Context Engineering-WindowMemory-cn.pdf
+    * 实现方式1脚本(旧版langchain)：window_memory_v1.py
+    * 实现方式2脚本(当前版本langchain)：window_memory_v2.py
 
 ## 如何使用
 ```bash
@@ -157,3 +166,4 @@ $ cd Context-Engineering-Tutorial
 ## 许可证
 
 MIT
+
