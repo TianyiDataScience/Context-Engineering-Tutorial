@@ -65,7 +65,7 @@ $ cd Context-Engineering-Tutorial
     1. https://code.visualstudio.com/
     2. 安装并打开 vscode
     3. 在本地新建一个文件夹并在VScode中打开
-    4. <img src="./assets/vscode_init.png" alt="Markdownify" width="300"></a>
+    4. <img src="./assets/vscode_init.png" alt="Markdownify" width="300">
 2. **安装uv：**
     1. Linux/MacOS：
         
@@ -156,6 +156,7 @@ $ cd Context-Engineering-Tutorial
 ## 许可证
 
 MIT
+
 
 
 
